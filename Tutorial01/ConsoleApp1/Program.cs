@@ -10,24 +10,20 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Please enter a number");
-            if (int.TryParse(Console.ReadLine(), out int userInput)) {
-                 if (userInput < 0)
-                {
-                    Console.WriteLine("The value is less than 0");
-                }
-                else
-                {
-                    Console.WriteLine("The value is equal to 0 or higher");
-                }
-            }
-            else
-            {
-                Console.WriteLine("Invalid input. Please enter an integer");
-            }
-
+            int[] ints = { 1, 2, 3, 4, 5 };
+            Console.WriteLine(CalculateAverage(ints));
             Console.WriteLine("Press any key to exit");
             Console.ReadKey();
+        }
+
+        public static int CalculateAverage(int [] ints)
+        {
+            int sum = 0;
+            foreach (var i in ints)
+            {
+                sum += i;
+            }
+            return sum/ints.Length;
         }
     }
 }
