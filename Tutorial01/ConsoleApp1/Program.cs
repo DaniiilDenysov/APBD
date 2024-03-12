@@ -12,6 +12,7 @@ namespace ConsoleApp1
         {
             int[] ints = { 1, 2, 3, 4, 5 };
             Console.WriteLine(CalculateAverage(ints));
+            Console.WriteLine(GetMax(ints));
             Console.WriteLine("Press any key to exit");
             Console.ReadKey();
         }
@@ -24,6 +25,16 @@ namespace ConsoleApp1
                 sum += i;
             }
             return sum/ints.Length;
+        }
+        
+        public static int GetMax(int [] ints)
+        {
+            int max = 0;
+            for (int i = 1; i < ints.Length;i++)
+            {
+                if (ints[i] > ints[max]) max = i;
+            }
+            return ints[max];
         }
     }
 }
