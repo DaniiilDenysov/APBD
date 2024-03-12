@@ -10,7 +10,7 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Pleasee eter a number");
+            Console.WriteLine("Please eter a number");
             int[] ints = { 1, 2, 3, 4, 5 };
             Console.WriteLine(CalculateAverage(ints));
             Console.WriteLine(GetMax(ints));
