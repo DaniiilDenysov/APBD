@@ -1,0 +1,13 @@
+Bananas;13.3;false
+Chocolate;18;false
+Fish;2;false
+Meat;-15;false
+Ice cream;-18;false
+Frozen pizza;-30;false
+Cheese;7.2;false
+Sausages;5;false
+Butter;20;false
+Eggs;19;false
+No name;20;false
+Milk;5;false
+Fuel;15;true
