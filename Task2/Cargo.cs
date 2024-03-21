@@ -19,10 +19,12 @@ public class Cargo
     public void GetRecommendedTemperature()
     {
         var data = ProductsDatabase.GetData(Name);
-        if (data != null)
-        {
             Temperature = data.Item1;
             Hazardous = data.Item2;
-        }
     }
-}
+
+    public override string ToString()
+    {
+        return $"{Name} temperature:{Temperature} hazardous:{Hazardous}";
+    }
+}   

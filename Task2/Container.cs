@@ -37,13 +37,13 @@
             return $"KON-{type}-{id}";
         }
 
-        public static Type GetContainerType(string type)
+        public static Container GetContainerType(string type)
         {
             switch (type)
             {
-                case "B" : return typeof(GasContainer);
-                case "C" : return typeof(RefrigeratedContainer);
-                default: return typeof(LiquidContainer);
+                case "B" : return new GasContainer();
+                case "C" : return new RefrigeratedContainer();
+                default: return new LiquidContainer();
             }
         }
 
@@ -53,7 +53,7 @@
         }
         public override string ToString()
         {
-            return $"{GetType().Name} with serial number:{SerialNumber} cargo mass:{CargoInfo!.Mass}/{MaxPayload} tare weight:{TareWeight}  total weight:{GetCurrentTotalWeight()}";
+            return $"{GetType().Name} with serial number:{SerialNumber} cargo mass:{CargoInfo.Mass}/{MaxPayload} tare weight:{TareWeight}  total weight:{GetCurrentTotalWeight()}  product: {CargoInfo}";
         }
     }
 }

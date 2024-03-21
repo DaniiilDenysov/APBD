@@ -6,7 +6,7 @@ public class ProductsDatabase
     
     public static void Initialize()
     {
-        string filePath = "C:\\Users\\Ebakryak\\RiderProjects\\APBD\\Task2\\Products.txt";
+        string filePath = "Products.txt";
         if (File.Exists(filePath))
         {
                 StreamReader reader = new StreamReader(filePath);
@@ -16,8 +16,8 @@ public class ProductsDatabase
                     string[] separated = line.Split(";");
                     double val;
                     bool hazardous;
-                    if (!double.TryParse(separated[1], out val)) continue;
-                    if (!bool.TryParse(separated[2], out hazardous)) continue;
+                    double.TryParse(separated[1], out val);
+                    bool.TryParse(separated[2], out hazardous);
                     _products.Add(separated[0].ToLower(),new Tuple<double,bool>(val,hazardous));
                    // Console.WriteLine($"{(val,hazardous).val} | {(val,hazardous).hazardous}");
                 }

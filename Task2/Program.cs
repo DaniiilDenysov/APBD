@@ -70,7 +70,7 @@ namespace Task2
         {
             Console.WriteLine("Please provide container type (A,B,C):");
             string name = Console.ReadLine() ?? "A";
-            var container = (Container)Activator.CreateInstance(Container.GetContainerType(name))!;
+            var container = Container.GetContainerType(name);
             Console.WriteLine("Please provide tare weight:");
             double.TryParse(Console.ReadLine(),out double tareWeight);
             Console.WriteLine("Please provide max payload:");
